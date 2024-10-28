@@ -1,2 +1,5 @@
 # SimulateQQ
-A simple system thst simulates QQ!
+A simple system that simulates QQ!
+
+# 启动项目
+npm start
