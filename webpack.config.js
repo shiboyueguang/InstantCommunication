@@ -3,10 +3,14 @@
  * @type {import('webpack').Configuration}
  */
 
-const path = require("path");
+import {resolve as _resolve, join} from "path";
 // const optimizeCss = require("optimize-css-assets-webpack-plugin");
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HTMLPlugin = require("html-webpack-plugin");
+import HTMLPlugin from "html-webpack-plugin";
+import { fileURLToPath } from 'url';
+import path from "node:path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const config = {
     // 入口文件
@@ -14,7 +18,7 @@ const config = {
     // 打包输出文件夹
     output: {
         filename: "bundle.js",
-        path: path.resolve(__dirname, "./dist"),
+        path: _resolve(__dirname, "./dist"),
     },
     mode: "development",
     module: {
@@ -43,22 +47,35 @@ const config = {
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.css', '.json']
+        extensions: ['.tsx', '.ts', '.js', '.css', '.json'],
+        alias: {
+            '@': _resolve(__dirname, 'src/')
+        }
     },
+    // 插件
     plugins: [
         new HTMLPlugin({
             template: "./public/index.html"
         })
     ],
+    // 服务器
     devServer: {
         static: {
-            directory: path.join(__dirname, 'dist'),
+            directory: join(__dirname, 'dist'),
         },
         compress: true,
-        port: 8088,
+        port: 8089,
         hot: true,
-        open: true
+        open: true,
+        // proxy: [{
+        //     '/api':
+        //         {
+        //             target: 'http://localhost:3000',
+        //             changeOrigin: true,
+        //             pathRewrite: { '^/api': '' }
+        //         },
+        // }],
     }
 };
 
-module.exports = config;
+export default config;

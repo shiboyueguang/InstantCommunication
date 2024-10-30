@@ -1,0 +1,160 @@
+/**
+ * @description 登录样式
+ */
+
+/* 定义一个背景颜色动画 */
+@keyframes gradient-animation {
+    0% {
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+    }
+    25% {
+        background: linear-gradient(135deg, #fad0c4, #ffd1ff, #ffd1ff, #fad0c4);
+    }
+    50% {
+        background: linear-gradient(225deg, #ffd1ff, #a18cd1, #a18cd1, #ffd1ff);
+    }
+    75% {
+        background: linear-gradient(315deg, #a18cd1, #fbc2eb, #fbc2eb, #a18cd1);
+    }
+    100% {
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+    }
+}
+/* 登录大背景 */
+.loginBackDrop {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+    animation: gradient-animation 5s ease infinite;
+    position: relative;
+}
+/* 登录背景 */
+.loginMiddleBackDrop {
+    width: 30%;
+    height: 50%;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    border-radius: 10px;
+    border: 1px solid #ff9a9e;
+    box-shadow: 0 0 10px rgba(0.1, 0.2, 0.3, 0.4);
+    position: absolute;
+    top: 22%;
+    left: 33%;
+}
+.loginMiddleBackDropDiv {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* 头像 */
+.personalAvatar {
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+    /*background: url(../../assets/QQ.png) no-repeat;*/
+    background-size: contain;
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 2%;
+    left: 32%;
+}
+/* 账号 */
+.personalAccount {
+    width: 60%;
+    height: 10%;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 45%;
+    left: 20%;
+}
+.personalAccountInput {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    text-indent: 10px;
+}
+/* 密码 */
+.personalPassword {
+    width: 60%;
+    height: 10%;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 60%;
+    left: 20%;
+}
+.personalPasswordInput {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    text-indent: 10px;
+}
+/* 登录 */
+.loginButton {
+    width: 60%;
+    height: 10%;
+    border: none;
+    background: lightskyblue;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: absolute;
+    top: 75%;
+    left: 20%;
+}
+/* 注册 */
+.registeredButtonMore {
+    width: 20%;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: absolute;
+    top: 90%;
+    left: 40%;
+}
+.registeredButton {
+    width: 20%;
+    height: 8%;
+    border: none;
+    background: white;
+    color: black;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: absolute;
+    top: 81%;
+    left: 40%;
+    display: none;
+}
+/* 错误提示信息 */
+.loginMistakeDiv {
+    width: 12%;
+    height: 5%;
+    border-radius: 30px;
+    background: red;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    /*display: none;*/
+}

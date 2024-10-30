@@ -1,0 +1,8 @@
+/**
+ * @description 404页面样式
+ */
+
+.notFoundText {
+    font-size: 30px;
+    color: black;
+}
