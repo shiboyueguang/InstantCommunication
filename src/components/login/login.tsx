@@ -11,6 +11,7 @@ import "../ErrorMessage/ErrorMessage.css"
 
 const Login: React.FC = () => {
     const [isAppear, setAppear] = useState(false);
+    const [isErrorVisible, setIsErrorVisible] = useState(false);
     // 注册样式
     let registeredButton: CSSProperties= {
         width: '20%',
@@ -40,7 +41,6 @@ const Login: React.FC = () => {
         setIsErrorVisible(true);
         setTimeout(() => setIsErrorVisible(false), 3000);
     }
-    const [isErrorVisible, setIsErrorVisible] = useState(false);
     return (
         <>
             {/*登录大背景*/}

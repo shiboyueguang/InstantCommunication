@@ -10,8 +10,8 @@ export async function connectDB() {
     try {
         // 连接到MongoDB
         await client.connect();
-        console.log("Connected successfully to server");
-        database = client.db('simulateQQ');
+        console.log("Connected successfully to MongoDB");
+        database = client.db('InstantCommunication');
         return database;
     } catch (err) {
         console.error(err);

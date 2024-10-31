@@ -1,5 +1,5 @@
-# SimulateQQ
-制作一个简单的模拟QQ系统！   
+# InstantCommunication
+制作一个简单的即时通信系统！   
 仅用来学习参考，绝对不会用于其他用处！
 
 # 使用技术
@@ -20,7 +20,7 @@
 
 NotFound表示404时的页面，暂时比较简陋，它不是重点，懒得搞他了。
 
-数据库名称：simulateQQ   
+数据库名称：InstantCommunication   
 登录的集合名称：userInfo   
 登录的时候数据库内容：
  - 账号 account
