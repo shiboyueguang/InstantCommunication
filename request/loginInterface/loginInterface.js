@@ -20,9 +20,17 @@ router.post('/loginMain', async (req, res) => {
     const user = userFindResult.find(u => u.account === userName && u.password === password);
     if(user) {
         const token = jwt.sign({ id: user.id }, 'moonUnder', { expiresIn: '1h'});
-        res.json({ token });
+        res.json({
+            token: token,
+            code: 200,
+            success: true
+        });
     } else {
-        res.json("账号或密码错误");
+        res.json({
+            token: '账号或密码错误',
+            code: 400,
+            success: false
+        });
     }
 });
 

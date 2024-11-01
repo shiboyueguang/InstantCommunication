@@ -148,15 +148,39 @@
     display: none;
 }
 /* 错误提示信息 */
-.loginMistakeDiv {
-    width: 12%;
-    height: 5%;
-    border-radius: 30px;
-    background: red;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 5%;
-    left: 20%;
-    /*display: none;*/
+/* 容器样式 */
+.loginMistakeDivContainer {
+    /*width: 25%;*/
+    border: 1px solid #ff4d4d;
+    background-color: #ffe6e6;
+    padding: 15px;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    color: #cc0000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    display: none;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s ease-in-out;
+    align-items: center;
+}
+/* 图标样式 */
+.loginMistakeDivIcon {
+    margin-right: 10px;
+    color: #cc0000;
+}
+/* 关闭按钮样式 */
+.loginMistakeDivCloseBtn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #cc0000;
+    font-size: 16px;
+    cursor: pointer;
+}
+.loginMistakeDivAppear {
+    display: flex !important;
+    opacity: 1;
+    transform: translateX(0);
 }

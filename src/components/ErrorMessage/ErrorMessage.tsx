@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 import './ErrorMessage.css';
 
 interface ErrorMessageProps {
-    message: React.ReactNode;
+    message: any;
     classNames: string;
     timeout: number;
     in: boolean;
