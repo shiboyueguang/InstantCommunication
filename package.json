@@ -40,6 +40,8 @@
     "react-router-dom": "^6.27.0",
     "react-transition-group": "^4.4.5",
     "redux": "^5.0.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",

@@ -41,6 +41,10 @@ const config = {
                 use: [
                     {
                         loader: "file-loader",
+                        options: {
+                            name: '[name].[hash].[ext]',
+                            outputPath: 'assets/',
+                        },
                     },
                 ]
             }
@@ -64,7 +68,7 @@ const config = {
             directory: join(__dirname, 'dist'),
         },
         compress: true,
-        port: 8089,
+        port: 8090,
         hot: true,
         open: true,
         // proxy: [{

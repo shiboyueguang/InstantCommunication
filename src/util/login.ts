@@ -16,9 +16,12 @@ export interface LoginRequestInterface {
     password: string;
 }
 
+let token: string = '';
+
 export const toLogin = async (loginRequest: LoginRequestInterface) => {
     try {
-        const response = await axios.post('http://localhost:3000/login/loginMain', loginRequest);
+        const response = await apiClient.post('/login/loginMain', loginRequest);
+        token = response.data.token;
         return response.data;
     } catch (error) {
         if (error.response) {
@@ -34,5 +37,15 @@ export const toLogin = async (loginRequest: LoginRequestInterface) => {
             console.error('Error:', error.message);
         }
         throw error;
+    }
+}
+
+export const getUserName = async () => {
+    try {
+        const response = await apiClient.get(`/login/getUserName/${token}`);
+        // console.log(token)
+        return response.data;
+    } catch (error) {
+        console.error(error);
     }
 }

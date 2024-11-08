@@ -17,6 +17,8 @@ function App(prop: { children: any }) {
     useEffect((): void => {
         if(!isAuthenticated()) {
             navigate('/login');
+        } else {
+            navigate('/work');
         }
     }, [navigate])
     return (

@@ -1,0 +1,67 @@
+/**
+ * @description 聊天室窗口样式
+ */
+.chatRoomBackDrop {
+    position: absolute;
+    left: 20%;
+    top: 6%;
+    width: 80%;
+    height: 94%;
+    text-align: center;
+}
+.chatRoomBackDropLitter {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.chatInput {
+    width: 60%;
+    height: 20%;
+    font-size: 20px;
+    max-width: 60%;
+    max-height: 120px;
+}
+.chatSend {
+    width: 10%;
+    height: 20%;
+    font-size: 20px;
+    background: #fbc2eb;
+    cursor: pointer;
+}
+.chatDiv {
+    width: 100%;
+    height: 20%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 80%;
+}
+.chatMessages {
+    width: 100%;
+    height: 80%;
+    border-bottom: 1px solid black;
+    overflow-y: auto;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.chatMessage li {
+    font-size: 25px;
+    /*background: lightgoldenrodyellow;*/
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    word-wrap: break-word;
+}
+.chatRoomBackDropActive {
+    display: none;
+}

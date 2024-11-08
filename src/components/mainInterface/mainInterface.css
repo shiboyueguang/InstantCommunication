@@ -1,3 +1,149 @@
 /**
  * @description 主界面样式
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+/* 主界面大背景 */
+.mainInterfaceBackDrop {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    position: relative;
+}
+/* 主界面顶部样式 */
+@keyframes spin {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+}
+.mainInterfaceTop {
+    height: 6%;
+    background: #f5f5f9;
+    position: relative;
+}
+.topMainIcon {
+    width: 10%;
+    height: 80%;
+    color: rgba(255, 87, 51, 0.8);
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    animation: spin 2s infinite;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/* 主界面边部样式 */
+.mainInterfaceAside {
+    width: 20%;
+    height: 100%;
+    background: #f5f5f5;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 10;
+}
+/* 边部按钮样式 */
+.asideIcon {
+    width: 12%;
+    height: 100%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: gainsboro;
+}
+.chatIcon {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 30%;
+}
+.chatIcon:hover {
+    background: ghostwhite;
+}
+.dynamicIcon {
+    width: 100%;
+    margin-bottom: 50px;
+    border-radius: 30%;
+}
+.dynamicIcon:hover {
+    background: ghostwhite;
+}
+.playIcon {
+    width: 100%;
+    border-radius: 30%;
+}
+.playIcon:hover {
+    background: ghostwhite;
+}
+.userImgIconBackDrop {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /*background: red;*/
+    border: 1px solid;
+    position: relative;
+    top: 10px;
+}
+.userImgIcon {
+    width: 100%;
+    height: 100%;
+}
+.theUserIsOnlineIcon {
+    width: 15px;
+    height: 15px;
+    background: greenyellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 43px;
+    left: 43px;
+    border: seashell 1px solid;
+}
+/* 边部聊天列表样式 */
+.AListOfPeopleToChatWith {
+    width: 85%;
+    height: 80%;
+    background: snow;
+    position: absolute;
+    top: 8%;
+    left: 13%;
+    z-index: 10;
+    max-height: 80%;
+    overflow-y: auto; /* 当内容超过最大高度时，垂直方向出现滚动条 */
+    overflow-x: hidden; /* 隐藏水平滚动条，根据需要可以调整 */
+    border-radius: 5%;
+}
+.AListOfPeopleToChatWithElement {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 15%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+.AListOfPeopleToChatWithElementActive {
+    background: honeydew;
+}
+.AListOfPeopleToChatWithElement:hover {
+    background: honeydew;
+}
+.IconActive {
+    background: ghostwhite
+}
+.chatElementActive {
+    background: honeydew
+}
