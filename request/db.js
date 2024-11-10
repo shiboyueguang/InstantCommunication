@@ -10,7 +10,7 @@ export async function connectDB() {
     try {
         // 连接到MongoDB
         await client.connect();
-        console.log("Connected successfully to MongoDB");
+        // console.log("Connected successfully to MongoDB");
         database = client.db('InstantCommunication');
         return database;
     } catch (err) {

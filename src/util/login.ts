@@ -49,3 +49,23 @@ export const getUserName = async () => {
         console.error(error);
     }
 }
+
+export const deleteGroupChat = async (groupName: string) => {
+    try {
+        await apiClient.delete(`/main/deleteChatGroupName/${groupName}`);
+        return true;
+    } catch (error) {
+        console.error(error);
+    }
+}
+interface addChat {
+    groupName: string;
+}
+export const addGroupName = async (addMsg: addChat) => {
+    try {
+        await apiClient.post(`/main/addChatGroupName`, addMsg);
+        return true;
+    } catch (error) {
+        console.error(error);
+    }
+}
