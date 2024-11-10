@@ -314,3 +314,16 @@
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.delete {
+    display: none;
+}
+.playDiv {
+    position: absolute;
+    left: 20%;
+    top: 6%;
+    width: 80%;
+    height: 94%;
+    text-align: center;
+    color: blanchedalmond;
+    font-size: 30px;
+}

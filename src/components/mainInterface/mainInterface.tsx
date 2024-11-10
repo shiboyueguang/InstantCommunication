@@ -9,6 +9,8 @@ import {getChatGroupName} from "../../util/mainInterface";
 import ChatRoom from "../chatRoom/chatRoom";
 import {addGroupName, deleteGroupChat} from "../../util/login";
 import QQNews from "../QQNews/QQNews";
+// import PuzzleGame from "../play/PuzzleGame";
+// import ErrorBoundary from "../play/ErrorBoundary";
 
 /**
  * @description 主界面
@@ -29,6 +31,7 @@ function MainInterface() {
     const playIconClass: string = chatAppear == 3 ? 'playIcon IconActive' : 'playIcon';
     const AListOfPeopleToChatWithAppear: string = chatAppear == 1 ? 'AListOfPeopleToChatWith' : '';
     const [isAppear, setIsAppear] = useState(false);
+    const [isPlay, setIsPlay] = useState(false);
     async function getChatGroup() {
         return await getChatGroupName();
     }
@@ -55,6 +58,7 @@ function MainInterface() {
             return;
         }
         setChatAppear(state);
+        setIsPlay(false)
     }
     function onClickChat(): void {
         onClickIcon(1);
@@ -67,10 +71,16 @@ function MainInterface() {
         } else {
             setIsAppear(false);
         }
+        setIsPlay(false);
     }
     function onClickPlay(): void {
         onClickIcon(3);
         setIsAppear(false);
+        if(!isPlay) {
+            setIsPlay(true);
+        } else {
+            setIsPlay(false);
+        }
     }
     const [chatGroupName, setChatGroupName] = useState('');
     function onClickChatElement(name: string, index: number): void {
@@ -140,6 +150,10 @@ function MainInterface() {
                 </div>
                 <ChatRoom data={chatGroupName} />
                 <QQNews is={isAppear} />
+                <div className={isPlay ? 'playDiv' : 'delete'}>还想玩游戏？</div>
+                {/*<ErrorBoundary>*/}
+                {/*    <PuzzleGame  rows={5} cols={5} imageSrc={userDefaultIcon}/>*/}
+                {/*</ErrorBoundary>*/}
             </div>
         </>
     )
